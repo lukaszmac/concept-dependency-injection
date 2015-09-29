@@ -5,6 +5,7 @@ System.config({
     "utils/*": "src/utils/*.js",
     "app/*": "src/*.js",
     "users/*": "src/users/*.js",
+    "concepts/*": "src/concepts/*.js",
     "material-start/*": "src/*.js",
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*"

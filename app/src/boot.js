@@ -9,6 +9,7 @@ import 'assets/app.css!'
 
 import angular from 'angular'
 import material from 'angular-material'
+import 'angular-ui-router';
 
 // Load custom application modules
 
@@ -27,7 +28,7 @@ angular
   .element( document )
   .ready( function() {
 
-    let appName = 'starter-app';
+    let appName = 'concept';
     let $log = new ExternalLogger();
 
     $log = $log.getInstance( "BOOTSTRAP" );
@@ -35,7 +36,7 @@ angular
 
     let body = document.getElementsByTagName("body")[0];
     let app  = angular
-          .module( appName, [ material, main ] )
+          .module( appName, [ material, main, 'ui.router' ] )
           .config( ['$provide', LogDecorator] );
 
     angular.bootstrap( body, [ app.name ], { strictDi: false })
