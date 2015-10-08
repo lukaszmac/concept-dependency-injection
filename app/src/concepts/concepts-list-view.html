@@ -1,8 +1,8 @@
 List
 <md-list layout="column">
-    <md-list-item ng-repeat="it in ul.users">
-        <md-button ng-click="ul.selectUser(it)" ng-class="{'selected' : it === ul.selected }">
-            <md-icon md-svg-icon="{{it.avatar}}" class="avatar"></md-icon>
+    <md-list-item ng-repeat="concept in concepts">
+        <md-button ng-click="concept.selectConcept(concept)" ng-class="{'selected' : concept === selected }">
+            <md-icon md-svg-icon="alarm" class="avatar"></md-icon>
           {{it.name}}
         </md-button>
     </md-list-item>

@@ -8,7 +8,7 @@ export default {
   views: {
     'content': {
       template: viewTemplate,
-      controller: "ConceptsController",
+      controller: "ConceptsContentController",
       controllerAs: 'controller'
     },
     'list': {
