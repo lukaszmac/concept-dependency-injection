@@ -4,6 +4,7 @@ System.config({
   paths: {
     "utils/*": "src/utils/*.js",
     "app/*": "src/*.js",
+    "root/*": "src/root/*.js",
     "users/*": "src/users/*.js",
     "concepts/*": "src/concepts/*.js",
     "material-start/*": "src/*.js",

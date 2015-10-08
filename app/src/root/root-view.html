@@ -1,0 +1,27 @@
+<div layout="column" flex tabIndex="-1" role="main" >
+  <div flex layout="column">
+
+      <!-- Container #1 (in wireframe) -->
+      <md-toolbar layout="row" class="md-whiteframe-z2">
+          <md-button class="menu" hide-gt-sm ng-click="ul.toggleList()" aria-label="Show User List">
+              <md-icon md-svg-icon="menu" ></md-icon>
+          </md-button>
+          <h1>Dependency Injection</h1>
+      </md-toolbar>
+
+      <!-- Container #2 (in wireframe) -->
+      <div flex layout="row">
+
+          <!-- Container #3 (in wireframe) -->
+          <md-sidenav md-is-locked-open="$mdMedia('gt-sm')" class="md-whiteframe-z2" md-component-id="left" layout="column">
+              <div ui-view="list"></div>
+          </md-sidenav>
+
+          <!-- Container #4 (in wireframe) -->
+          <md-content flex id="content" ui-view="content">
+
+          </md-content>
+
+      </div>
+  </div>
+</div>

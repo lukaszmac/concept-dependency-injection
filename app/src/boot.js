@@ -37,11 +37,23 @@ angular
     let body = document.getElementsByTagName("body")[0];
     let app  = angular
           .module( appName, [ material, main, 'ui.router' ] )
-          .config( ['$provide', LogDecorator] );
+          .config( ['$provide', LogDecorator] )
+      .config(['$locationProvider', ConfigureApp]);
 
     angular.bootstrap( body, [ app.name ], { strictDi: false })
 
   });
 
+function ConfigureApp($locationProvider)
+{
+  // NOTE: We switch off html 5 mode to help debug with live server.
 
+  // Switch on html 5 mode:
+  // http://stackoverflow.com/questions/27307914/angular-error-running-karma-tests-html5-mode-requires-a-base-tag
+  // http://stackoverflow.com/a/28686169/231860
+  //$locationProvider.html5Mode({
+  //  enabled: true,
+  //  requireBase: false
+  //});
+}
 

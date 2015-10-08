@@ -1,9 +1,9 @@
 /**
- * The controller for concepts
+ * The root state controller.
  * @constructor
  * @param $log
  */
-function ConceptsController( $log ) {
+function RootController( $log ) {
 
   $log = $log.getInstance( "SessionController" );
   $log.debug( "instanceOf() ");
@@ -14,6 +14,6 @@ function ConceptsController( $log ) {
 
 export default [
     '$log',
-    ConceptsController
+    RootController
   ];
 

@@ -1,0 +1,27 @@
+Content
+<md-icon md-svg-icon="{{ul.selected.avatar}}" class="avatar"></md-icon>
+<h2>{{ul.selected.name}}</h2>
+<p>{{ul.selected.content}}</p>
+
+<md-button class="share" md-no-ink ng-click="ul.share($event)" aria-label="Share">
+    <md-icon md-svg-icon="share"></md-icon>
+</md-button>
+
+<md-button class="md-raised">
+    Hello World
+</md-button>
+
+<md-card class=".md-raised">
+    <img ng-src="{{imagePath}}" class="md-card-image" alt="Washed Out">
+    <md-card-content>
+        <h2 class="md-title">Paracosm</h2>
+        <p>
+            The titles of Washed Out's breakthrough song and the first single from Paracosm share the
+            two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+        </p>
+    </md-card-content>
+    <div class="md-actions" layout="row" layout-align="end center">
+        <md-button>Action 1</md-button>
+        <md-button>Action 2</md-button>
+    </div>
+</md-card>

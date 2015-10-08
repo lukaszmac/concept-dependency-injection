@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" >
-  <head>
+<html lang="en">
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"/>
 
     <title>CONCEPT: Dependency Injection</title>
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,700'>
@@ -17,26 +17,23 @@
             display: none;
         }
     </style>
-  </head>
+</head>
 
-  <body ng-cloak layout="column">
+<body ng-cloak layout="column">
 
+<div ui-view>
+</div>
 
-    <div ng-include="'src/users/view/browseUsers.html'"
-         layout="column" flex tabIndex="-1" role="main" >
-    </div>
+<a ui-sref="root">Root</a>
+<a ui-sref="concepts">Concepts</a>
 
-    <div ui-view>
-
-    </div>
-
-    <script src="./jspm_packages/system.js" type="text/javascript"></script>
-    <script src="./config.js" type="text/javascript"></script>
-    <script type="text/javascript">
-        System
+<script src="./jspm_packages/system.js" type="text/javascript"></script>
+<script src="./config.js" type="text/javascript"></script>
+<script type="text/javascript">
+    System
             .import('app/boot')
-            .catch( console.error.bind(console) ); // make sure any errors print to console
-    </script>
+            .catch(console.error.bind(console)); // make sure any errors print to console
+</script>
 
-  </body>
+</body>
 </html>

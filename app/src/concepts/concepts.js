@@ -5,7 +5,8 @@ const URL_ICON_SHARE   = 'assets/svg/share.svg';
 // Load the custom app ES6 modules
 
 import 'angular-ui-router';
-import ConceptsController from 'concepts/concepts-controller'
+import ConceptsContentController from 'concepts/concepts-content-controller'
+import ConceptsListController from 'concepts/concepts-list-controller'
 import conceptsState from 'concepts/concepts-state'
 
 import { ExternalLogger } from 'utils/LogDecorator';
@@ -18,7 +19,8 @@ let $log = new ExternalLogger();
 
 let moduleName = angular
       .module( "concepts", [ 'ui.router'  ] )
-      .controller("ConceptsController" , ConceptsController )
+      .controller("ConceptsContentController" , ConceptsContentController )
+      .controller("ConceptsListController" , ConceptsListController )
       .config( ($mdIconProvider) => {
 
 
