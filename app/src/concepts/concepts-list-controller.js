@@ -11,8 +11,8 @@ function ConceptsListController( $log, $scope ) {
 
   // Define the concepts that we have:
   $scope.concepts = [
-    { name: 'Concept 1', icon:'supervisor_account' },
-    { name: 'Concept 2', icon:'swap_vertical_circle' },
+    { name: 'Overview', icon:'binoculars' },
+    { name: 'Declarative vs Imperative', icon:'random' },
     { name: 'Concept 3', icon:'tab' }
   ];
 

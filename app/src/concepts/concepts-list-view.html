@@ -1,9 +1,16 @@
-List
 <md-list layout="column">
     <md-list-item ng-repeat="concept in concepts">
-        <md-button ng-click="concept.selectConcept(concept)" ng-class="{'selected' : concept === selected }">
-            <md-icon md-svg-icon="alarm" class="avatar"></md-icon>
-          {{it.name}}
+
+
+        <md-button style="text-align:left" ng-click="concept.selectConcept(concept)" ng-class="{'selected' : concept === selected }">
+
+
+            <md-button class="md-fab" aria-label="{{concept.name}}" >
+                <md-icon md-svg-icon="{{concept.icon}}"></md-icon>
+            </md-button>
+
+          {{concept.name}}
         </md-button>
+
     </md-list-item>
 </md-list>
