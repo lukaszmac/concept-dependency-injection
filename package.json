@@ -1,8 +1,8 @@
 {
-  "name": "CONCEPT: Dependency Injection",
+  "name": "concept-dependency-injection",
   "private": true,
   "version": "0.0.1",
-  "description": "A starter project for AngularJS Material",
+  "description": "A conceptual demo that uses AngularJS Material to visualize the concept of dependency injection",
   "repository": "https://github.com/angular/material-start",
   "license": "MIT",
   "jspm": {
@@ -26,12 +26,12 @@
     }
   },
   "devDependencies": {
-    "karma": "~0.10",
-    "protractor": "^1.1.1",
-    "http-server": "^0.6.1",
     "bower": "^1.3.1",
-    "shelljs": "^0.2.6",
-    "karma-junit-reporter": "^0.2.2"
+    "http-server": "^0.6.1",
+    "karma": "~0.10",
+    "karma-junit-reporter": "^0.2.2",
+    "protractor": "^1.1.1",
+    "shelljs": "^0.2.6"
   },
   "scripts": {
     "prestart": "npm update"
