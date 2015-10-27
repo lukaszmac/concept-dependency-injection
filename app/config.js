@@ -8,6 +8,7 @@ System.config({
     "users/*": "src/users/*.js",
     "concepts/*": "src/concepts/*.js",
     "concept-overview/*": "src/concept-overview/*.js",
+    "concept-dec-vs-imp/*": "src/concept-dec-vs-imp/*.js",
     "material-start/*": "src/*.js",
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*"
