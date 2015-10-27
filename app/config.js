@@ -7,6 +7,7 @@ System.config({
     "root/*": "src/root/*.js",
     "users/*": "src/users/*.js",
     "concepts/*": "src/concepts/*.js",
+    "concept-overview/*": "src/concept-overview/*.js",
     "material-start/*": "src/*.js",
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*"

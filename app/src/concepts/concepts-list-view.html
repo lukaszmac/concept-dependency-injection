@@ -2,7 +2,7 @@
     <md-list-item ng-repeat="concept in concepts">
 
 
-        <md-button style="text-align:left" ng-click="concept.selectConcept(concept)" ng-class="{'selected' : concept === selected }">
+        <md-button style="text-align:left" ng-click="selectConcept(concept)" ng-class="{'selected' : concept === selected }">
 
 
             <md-button class="md-fab" aria-label="{{concept.name}}" >

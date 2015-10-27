@@ -3,7 +3,7 @@
  * @constructor
  * @param $log
  */
-function ConceptsListController( $log, $scope ) {
+function ConceptsListController( $log, $scope, $state) {
 
   $log.debug( "Concepts List Controller");
 
@@ -18,6 +18,19 @@ function ConceptsListController( $log, $scope ) {
 
   // Select the first concept:
   $scope.selected = $scope.concepts[0];
+
+  // Define the logic for selecting a concept:
+  $scope.selectConcept = selectConcept;
+
+  /**
+   * This selects the given concept.
+   * @param concept The concept to select.
+   */
+  function selectConcept(concept)
+  {
+    // Go to the state defined by the concept:
+    $state.go(concept.state || concept.name);
+  }
 
 }
 
