@@ -41,11 +41,11 @@ angular
     let app  = angular
           .module( appName, [ material, main, 'ui.router' ] )
           .config( ['$provide', LogDecorator] )
-      .config(['$locationProvider', ConfigureApp])
-      .config(['$mdIconProvider', ConfigureIcons]);
+      .config(['$locationProvider', '$urlRouterProvider', ConfigureApp])
+      .config(['$mdIconProvider', ConfigureIcons])
+      .run(['$state',run]);
 
     angular.bootstrap( body, [ app.name ], { strictDi: false })
-
 
     function ConfigureIcons($mdIconProvider)
     {
@@ -61,7 +61,7 @@ angular
 
     }
 
-    function ConfigureApp($locationProvider)
+    function ConfigureApp($locationProvider, $urlRouterProvider)
     {
       // NOTE: We switch off html 5 mode to help debug with live server.
 
@@ -70,8 +70,17 @@ angular
       // http://stackoverflow.com/a/28686169/231860
       //$locationProvider.html5Mode({
       //  enabled: true,
-      //  requireBase: false
+      //  requireBase: true
       //});
+
+      // Set the default location to be the concept page:
+      // when there is an empty route, redirect to /index
+      $urlRouterProvider.when('', '/concepts');
+    }
+
+    function run($state)
+    {
+      $state.go('concepts');
     }
 
   });
